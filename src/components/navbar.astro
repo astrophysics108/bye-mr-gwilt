@@ -3,11 +3,11 @@ import "../pages/students/test.astro";
 ---
 
 <html>
-  <div class="container">
-    <div class="links">
-      <a href="/students/test">Test</a>
+    <div id="sidebar" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">&times;</a>
+        <a href="/bye-mr-gwilt/students/test">Test</a>
     </div>
-  </div>
+    <img onclick="openNav()" class = "sidebaricon" src = "https://cdn-icons-png.flaticon.com/512/10055/10055575.png">
 
   <style>
     .container {
@@ -22,14 +22,54 @@ import "../pages/students/test.astro";
     div {
       width: 50vw;
     }
+    
+    .sidenav {
+    height: 100%; 
+    width: 0;
+    position: fixed; 
+    z-index: 1000;
+    top: 0; 
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 60px;
+    transition: 0.5s;
+    }
 
-    .links {
-      align-items: center;
-      justify-content: right;
-      display: flex;
-      width: 100vw;
-      padding-right: 2em;
-      color: black;
+    
+    .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    font-family: "Bungee Shade", sans-serif;
+    transition: 0.3s;
+    }
+
+    
+    .sidenav a:hover {
+    color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    }
+    .sidebaricon{
+        width: 5vh;
+        height:auto;
+        position: fixed;
+        top:2vw;
+        left:2vw;
     }
   </style>
 </html>

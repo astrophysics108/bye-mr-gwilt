@@ -6,9 +6,12 @@ import Navbar from "../components/navbar.astro";
 
 
 <html lang="en">
+    <head>
+        <script src="/sidebar.js" defer></script>
+    </head>
   <body>
     <Navbar />
-    <slot />
+    <slot id = "main"/>
   </body>
 </html>
 
@@ -27,4 +30,8 @@ import Navbar from "../components/navbar.astro";
     text-align:center;
     color: rgb(247, 169, 43);
   }
+  #main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
 </style>
