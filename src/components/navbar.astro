@@ -1,0 +1,35 @@
+---
+import "../pages/students/test.astro";
+---
+
+<html>
+  <div class="container">
+    <div class="links">
+      <a href="/students/test">Test</a>
+    </div>
+  </div>
+
+  <style>
+    .container {
+      display: flex;
+      height: 10vh;
+      width: 100%;
+      align-content: space-between;
+      z-index: 10;
+      transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    }
+
+    div {
+      width: 50vw;
+    }
+
+    .links {
+      align-items: center;
+      justify-content: right;
+      display: flex;
+      width: 100vw;
+      padding-right: 2em;
+      color: black;
+    }
+  </style>
+</html>
