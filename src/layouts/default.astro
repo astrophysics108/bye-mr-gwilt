@@ -8,9 +8,11 @@ import Navbar from "../components/navbar.astro";
 <html lang="en">
     <head>
         <script src="/bye-mr-gwilt/sidebar.js" defer></script>
+        <script src="/bye-mr-gwilt/starfall.js" defer></script>
     </head>
   <body>
     <Navbar />
+    <canvas id="sky" style="position:fixed; top:0; left:0; z-index:-1; pointer-events:none;"></canvas>
     <slot id = "main"/>
   </body>
 </html>
@@ -23,15 +25,22 @@ import Navbar from "../components/navbar.astro";
   body {
     background-color: rgb(34, 32, 58);
   }
+
+  :global(.pagesubtitle),
   :global(.pagetitle){
     font-family: "Bungee Shade", sans-serif;
-    font-weight: 50;
-    font-size: 20vh;
     text-align:center;
     color: rgb(247, 169, 43);
   }
-  #main {
-  transition: margin-left .5s;
-  padding: 20px;
-}
+
+  :global(.pagetitle){
+    font-size: 20vh;
+    font-weight: 50;
+  }
+
+  :global(.pagesubtitle){
+    font-size:3vh;
+    font-weight: 500;
+  }
+
 </style>
