@@ -1,7 +1,7 @@
 ---
 // Import shared components
 import Navbar from "../components/navbar.astro";
-
+import Quotes from "../layouts/sections/quotes.astro";
 ---
 
 
@@ -9,14 +9,12 @@ import Navbar from "../components/navbar.astro";
     <head>
         <script src="/bye-mr-gwilt/sidebar.js" defer></script>
         <script src="/bye-mr-gwilt/starfall.js" defer></script>
-        <script src="/bye-mr-gwilt/data.js" defer></script>
     </head>
   <body>
     <Navbar />
     <canvas id="sky" style="position:fixed; top:0; left:0; z-index:-1; pointer-events:none;"></canvas>
-    <div id="responses"></div>
     <slot id = "main"/>
-    
+    <Quotes />
   </body>
 </html>
 
