@@ -8,19 +8,16 @@ class QuoteCard extends HTMLElement {
         
         const style = document.createElement('style');
         style.textContent = `
-             .container {
-    display: flex; 
-    flex-direction: column;
-    min-height: 20em; 
-    margin: 2em;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 8px 8px 36px 0px rgba(0, 0, 0, 0.3);
-    padding: 2em;
-    background-color: #8557aa;
-    flex: 1 1 300px; 
-    max-width: 90%; 
-}
+            .container {
+                display: block;
+                min-height: inherit;
+                margin: 2em;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 8px 8px 36px 0px rgba(0, 0, 0, 0.3);
+                padding: 2em;
+                background-color: #8557aa;
+            }
             .container:hover {
                 transition: 0.4s;
             }

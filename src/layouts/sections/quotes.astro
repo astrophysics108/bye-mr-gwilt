@@ -10,25 +10,26 @@ import Grid from "../../components/grid.astro"
     </head>
     <body>
     <div class = "quote-section" id = "quote-section">
-    <Grid id="responses">
-    </Grid>
     </div>
     </body>
 
     <style>
        :global(.quote-section) {
-        display: flex;
-        flex-wrap:wrap;
-        padding: 4rem;
-        justify-content: center;
-        align-items: flex-start; 
+        display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 2em;
        }
+        @media only screen and (max-width: 900px) {
+      :global(.quote-section) {
+        grid-template-columns: 1fr;
+      }
+    }
 
 
 
     :global(.quote) {
       font-family: "Bungee", "sans-serif";
-      font-size: 1em;
+      font-size: 2em;
     }
 
     :global(.name) {
