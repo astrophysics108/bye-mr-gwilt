@@ -1,4 +1,6 @@
 ---
+import Quotecard from "../../components/card.astro";
+import Grid from "../../components/grid.astro"
 ---
 
 
@@ -7,8 +9,30 @@
         <script src="/bye-mr-gwilt/data.js" defer></script>
     </head>
     <body>
-    <div id="responses">
-        <div id = "quotes"></div>
+    <div class = "quote-section" id = "quote-section">
+    <Grid id="responses">
+    </Grid>
     </div>
     </body>
+
+    <style>
+       :global(.quote-section) {
+        display: flex;
+        flex-wrap:wrap;
+        padding: 4rem;
+        justify-content: center;
+        align-items: flex-start; 
+       }
+
+
+
+    :global(.quote) {
+      font-family: "Bungee", "sans-serif";
+      font-size: 1em;
+    }
+
+    :global(.name) {
+      font-family: "Bungee", "sans-serif";
+    }
+    </style>
 </html>

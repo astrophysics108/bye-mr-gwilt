@@ -1,0 +1,26 @@
+---
+const { text = "" } = Astro.props;
+---
+
+<html>
+    <!--code stolen from a friend -->
+  <h1>{text}</h1>
+  <div class="container">
+    <slot />
+  </div>
+
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 2em;
+    }
+    @media only screen and (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+
+</html>
