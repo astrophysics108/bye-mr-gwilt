@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 } else if (key === "What Year Are You In?") {
                     year = `${entry[key]}</p>`;
                 } else {
-                    quote = `<h2 class="quote">${entry[key]}</h2>`;
+                    quote = `<h2 class="quote">"${entry[key]}"</h2>`;
                 }
             });
             quoteCard.innerHTML = quote + nameperson + year; 

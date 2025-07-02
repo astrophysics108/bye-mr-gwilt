@@ -1,7 +1,7 @@
 const sky = document.getElementById("sky");
 const ctx = sky.getContext("2d");
 const stars = [];
-const maxstars = 50;
+const maxstars = 200;
 
 function resizeCanvas() {
     sky.width = window.innerWidth;

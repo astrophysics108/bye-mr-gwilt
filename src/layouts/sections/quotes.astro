@@ -19,13 +19,22 @@ import Grid from "../../components/grid.astro"
         padding: 4em;
         flex-wrap: wrap;
         justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
        }
+       @media only screen and (max-width: 900px) {
+      :global(.quote-section) {
+        grid-template-columns: 1fr;
+      }
+    }
 
 
 
     :global(.quote) {
       font-family: "Bungee", "sans-serif";
+      font-style: italic;
       font-size: 1em;
+      font-weight: 300;
     }
 
     :global(.name) {
