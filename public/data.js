@@ -16,10 +16,12 @@ class QuoteCard extends HTMLElement {
                 overflow: hidden;
                 box-shadow: 8px 8px 36px 0px rgba(0, 0, 0, 0.3);
                 padding: 2em;
-                background-color: #8557aa;
+                   background-color:rgb(196, 163, 108);
+                   transition: 0.4s ease
             }
             .container:hover {
-                transition: 0.4s;
+                transition: 0.4s ease;
+                transform: scale(1.1)
             }
             .container :global(h2) {
                 font-family: "Atkinson Hyperlegible", sans-serif;
