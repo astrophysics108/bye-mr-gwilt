@@ -15,15 +15,11 @@ import Grid from "../../components/grid.astro"
 
     <style>
        :global(.quote-section) {
-        display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      margin-top: 2em;
+        display: flex;
+        padding: 4em;
+        flex-wrap: wrap;
+        justify-content: center;
        }
-        @media only screen and (max-width: 900px) {
-      :global(.quote-section) {
-        grid-template-columns: 1fr;
-      }
-    }
 
 
 
