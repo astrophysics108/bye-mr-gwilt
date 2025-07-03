@@ -61,7 +61,7 @@ var quote = null;
 var year = null;
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("https://script.google.com/macros/s/AKfycbymNtqc_8ePorbxoyLem5GC616ycLg3zEi_Nt9WjOJmdtdGx6Imd4JiPMc4YvhYmOvdMg/exec")
+    fetch("")
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
